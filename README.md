@@ -2,7 +2,7 @@
 
 # Project 2 - Instrumented & Monitored Cloud Service
 
-**Cloud Engineering Bootcamp – Week 6** 
+**Cloud Engineering Bootcamp – Week 6 
 **Activity Type:** Individual 
 **Estimated Time:** 3 days 
  
@@ -23,10 +23,14 @@ I'm continuing a **Cloud Observability project** I was working on in another cha
 ## 🎯 Lab Objective
 
 Goal:
+
 The goal of this lab was to analyze and improve the performance and observability of a cloud-based web service deployed on AWS.
 The objective was to instrument the application with logging and metrics, monitor system behavior using CloudWatch dashboards, and evaluate how the system behaves under different conditions such as error spikes and latency spikes.
+
 This lab demonstrates how observability tools help engineers understand system performance and diagnose issues quickly.
+
 ---
+
 
 ## Architecture
 
@@ -46,13 +50,18 @@ Client → Flask API → CloudWatch Logs + Metrics → Dashboard + Alarms
 
 ---
 ## 🔧 Optimizations Implemented
+
 Several improvements were implemented to enhance monitoring and operational visibility:
+
 Structured Logging
 Implemented JSON structured logging using structlog to make logs machine-readable and easier to analyze.
+
 Correlation IDs
 Each request was assigned a unique correlation ID to trace the request lifecycle across logs and metrics.
+
 Custom Application Metrics
 The application publishes the following metrics to CloudWatch:
+
 RequestCount
 ErrorCount
 OrdersCreated
@@ -60,7 +69,9 @@ OrderValue
 Monitoring Dashboard
 A CloudWatch dashboard was created to visualize key system signals.
 Automated Alerting
+
 CloudWatch alarms were configured to detect abnormal behavior and send notifications via Amazon SNS.
+
 ---
 
 ## ⚡ Performance Comparison
@@ -85,6 +96,8 @@ Normal API requests
 
 These results demonstrate how observability metrics reveal system behavior under different conditions.
 
+---
+
 ## Application Endpoints
 
 | Endpoint | Description |
@@ -98,7 +111,7 @@ These results demonstrate how observability metrics reveal system behavior under
 ---
 
 
-### Structured Logging
+## Structured Logging
 
 Logs are written in JSON format and include:
 
@@ -130,6 +143,7 @@ Example:
 ## Namespace:
 
 Project2/ObservableService
+---
 
 ## Monitoring Dashboard
 The CloudWatch dashboard visualizes key metrics including:
@@ -138,6 +152,7 @@ Error Rate
 Orders Created
 Order Value
 CPU Utilization
+---
 
 ## Alerting System
 CloudWatch alarms trigger notifications when abnormal behavior occurs.
@@ -150,10 +165,11 @@ HighErrorRate  |	 ErrorCount > 5
 LowOrders	  | OrdersCreated < 1
 
 Alerts are delivered via SNS email notifications.
-
+---
 
 ## Failure Simulation
 Two simulated failures were tested.
+
 
 ## Error Spike
 
@@ -164,6 +180,7 @@ CloudWatch detected the spike and triggered an alarm.
 Requests were sent to /slow, generating high latency responses.
 Logs confirmed increased response times.
 
+---
 
 ## 🛠️ Key Lessons Learned
 
@@ -177,6 +194,7 @@ Key insights gained from this lab:
 
 This lab demonstrates how combining logs, metrics, and alerts creates a reliable monitoring strategy.
 
+---
 
 ## 📊 How to Reproduce
 
@@ -197,6 +215,7 @@ curl http://EC2-IP:5001/slow
 
 Observe the dashboard and alerts.
 
+---
 
 ## 🔧 Tools & Versions Used
 
@@ -210,12 +229,12 @@ Observe the dashboard and alerts.
 | CloudWatch | Logging and monitoring |
 | SNS        | Alert notifications    |
 
-
 Environment:
 Ubuntu 24.04
 Python 3.10+
 EC2 instance type: t2.micro
 
+---
 
 ## 📁 Repository Structure 
 
@@ -277,12 +296,14 @@ observable-cloud-service/
   ├── 34-cpu-utilization-during-slow.png
   └── api-running-&-health-endpoint.png
 
+---
 
 ## Conclusion
 
 This project demonstrates the importance of observability in modern cloud systems.
 By combining logging, metrics, dashboards, and alerting, engineers can quickly detect and diagnose system issues.
 
+---
 
 🚀 Next Steps / Extra Mile Ideas
 
@@ -294,6 +315,7 @@ Possible improvements for future work:
 4-Introduce load testing using tools such as Locust or k6
 5-Add cost monitoring and FinOps dashboards
 
+---
 
 
 Thank you for reviewing!
