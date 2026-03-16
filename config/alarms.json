@@ -1,0 +1,31 @@
+{
+  "alarms": [
+    {
+      "name": "HighCPU",
+      "metric": "CPUUtilization",
+      "namespace": "AWS/EC2",
+      "threshold": 70,
+      "comparison": "GreaterThanThreshold",
+      "period": 300,
+      "evaluationPeriods": 1
+    },
+    {
+      "name": "HighErrorRate",
+      "metric": "ErrorCount",
+      "namespace": "Project2/ObservableService",
+      "threshold": 5,
+      "comparison": "GreaterThanThreshold",
+      "period": 60,
+      "evaluationPeriods": 1
+    },
+    {
+      "name": "LowOrders",
+      "metric": "OrdersCreated",
+      "namespace": "Project2/ObservableService",
+      "threshold": 1,
+      "comparison": "LessThanThreshold",
+      "period": 300,
+      "evaluationPeriods": 1
+    }
+  ]
+}

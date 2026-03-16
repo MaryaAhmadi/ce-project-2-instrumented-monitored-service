@@ -1,0 +1,97 @@
+# Observable Service Runbook
+
+## Purpose
+
+This runbook provides operational procedures for monitoring and responding to alerts in the Observable Service.
+
+---
+
+## Monitoring Dashboard
+
+Dashboard Name:
+
+ObservableServiceDashboard
+
+Key metrics monitored:
+
+- RequestCount
+- ErrorCount
+- OrdersCreated
+- OrderValue
+- CPUUtilization
+
+---
+
+## Common Alerts
+
+### HighCPU
+
+Condition:
+
+CPUUtilization > 70%
+
+Actions:
+
+1. Check EC2 instance CPU usage
+2. Review running processes
+3. Investigate high request load
+4. Consider scaling the instance
+
+---
+
+### HighErrorRate
+
+Condition:
+
+ErrorCount > 5 within 1 minute
+
+Actions:
+
+1. Check CloudWatch Logs
+2. Identify failing endpoint
+3. Review recent deployments
+4. Investigate application errors
+
+---
+
+### LowOrders
+
+Condition:
+
+OrdersCreated < 1 within 5 minutes
+
+Actions:
+
+1. Verify API functionality
+2. Check database connectivity
+3. Confirm service availability
+
+---
+
+## Log Investigation
+
+To investigate issues:
+
+1. Open CloudWatch Logs
+2. Search for error logs
+3. Filter by correlation_id
+4. Trace the request flow
+
+---
+
+## Service Health Check
+
+Endpoint:/health
+
+curl http://EC2-IP:5001/health
+
+## Restart Application
+
+SSH into EC2:ssh ubuntu@EC2-IP
+
+Activate environment:
+source venv/bin/activate
+
+Restart service:
+python app.py
+
