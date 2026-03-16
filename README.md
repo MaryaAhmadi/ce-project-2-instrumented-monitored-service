@@ -122,7 +122,6 @@ Logs are written in JSON format and include:
 - latency
 - log level
 
-
 ### Custom Metrics
 
 ## Metrics sent to CloudWatch:
