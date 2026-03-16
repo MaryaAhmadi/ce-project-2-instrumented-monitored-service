@@ -122,15 +122,6 @@ Logs are written in JSON format and include:
 - latency
 - log level
 
-Example:
-
-```json
-{
- "event": "request_completed",
- "status_code": 200,
- "latency_ms": 25
-}
-
 
 ### Custom Metrics
 
