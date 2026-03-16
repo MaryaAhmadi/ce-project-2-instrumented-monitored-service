@@ -30,6 +30,21 @@
         "period": 60
       }
     },
+   {
+        "type": "metric",
+        "x": 12,
+        "y": 6,
+        "width": 12,
+        "height": 6,
+        "properties": {
+          "metrics": [
+            ["Project2/ObservableService", "ApiLatency"]
+          ],
+          "title": "API Latency",
+          "stat": "Average",
+          "period": 60
+       }
+     }, 
     {
       "type": "metric",
       "x": 0,

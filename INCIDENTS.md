@@ -23,3 +23,6 @@ Simulated error endpoint.
 Lesson Learned:
 
 Monitoring successfully detected the failure.
+
+The latency spike was confirmed using the ApiLatency metric in CloudWatch.
+The dashboard showed increased response time during requests to the /slow endpoint.

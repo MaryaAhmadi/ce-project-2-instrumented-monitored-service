@@ -62,10 +62,11 @@ Each request was assigned a unique correlation ID to trace the request lifecycle
 Custom Application Metrics
 The application publishes the following metrics to CloudWatch:
 
-RequestCount
-ErrorCount
-OrdersCreated
-OrderValue
+1.RequestCount
+2.ErrorCount
+3.OrdersCreated
+4.OrderValue
+5.ApiLatency
 Monitoring Dashboard
 A CloudWatch dashboard was created to visualize key system signals.
 Automated Alerting
@@ -91,6 +92,7 @@ Normal API requests
 | RequestCount    | ~5 requests/min | ~30 requests/min | ~20 requests/min   |
 | ErrorCount      | 0               | >10 errors/min   | 0                  |
 | Latency         | ~20 ms          | ~25 ms           | ~3000 ms           |
+ ApiLatency       | ~20 ms          | ~25 ms           | ~3000 ms           |
 | CPU Utilization | ~5%             | ~10%             | ~12%               |
 
 
@@ -129,6 +131,15 @@ Logs are written in JSON format and include:
 - ErrorCount
 - OrdersCreated
 - OrderValue
+- Apilatency
+
+
+RequestCount → traffic monitoring
+ErrorCount → reliability monitoring
+OrdersCreated → business activity
+OrderValue → revenue insight
+ApiLatency → measures how long the API takes to respond to requests in millise$ 
+This metric is important for detecting slow endpoints and latency spikes.
 
 ## Namespace:
 

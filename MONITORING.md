@@ -1,4 +1,4 @@
-# Monitoring
+## Monitoring
 
 ## Dashboard Design
 
@@ -8,15 +8,23 @@ Golden Signals monitored:
 
 Traffic → RequestCount  
 Errors → ErrorCount  
-Saturation → CPUUtilization
-
+Latency → ApiLatency
+Saturation → CPUUtilizatio
+n
 ## Widgets
 
 RequestCount  
 ErrorCount  
 OrdersCreated  
 OrderValue  
+Apilatency
 CPUUtilization
+
+
+### ApiLatency
+Shows average API response time in milliseconds.
+Used to identify slow requests and latency spikes.
+
 
 ## Troubleshooting
 

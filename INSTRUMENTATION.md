@@ -35,6 +35,7 @@ RequestCount
 ErrorCount  
 OrdersCreated  
 OrderValue
+Apilatency
 
 ## Why These Metrics Matter
 
@@ -42,3 +43,5 @@ RequestCount → traffic monitoring
 ErrorCount → reliability monitoring  
 OrdersCreated → business activity  
 OrderValue → revenue insight
+ApiLatency → measures how long the API takes to respond to requests in milliseconds.
+This metric is important for detecting slow endpoints and latency spikes.

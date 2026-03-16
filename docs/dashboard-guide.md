@@ -20,6 +20,7 @@ RequestCount
 ErrorCount  
 OrdersCreated  
 OrderValue  
+ApiLatency
 CPUUtilization
 
 These metrics help engineers understand system activity and detect abnormal behavior.
@@ -78,6 +79,12 @@ Helps demonstrate business observability.
 
 ---
 
+### ApiLatency
+Displays API response time in milliseconds.
+Higher values indicate slower request processing.
+This widget helps detect latency spikes and performance degradation.
+
+---
 ### CPUUtilization
 
 Shows the EC2 instance CPU usage.
